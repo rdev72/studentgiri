@@ -1,0 +1,2 @@
+- deployed to heroku
+- https://studentgiri.herokuapp.com/

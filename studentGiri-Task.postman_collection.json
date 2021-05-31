@@ -1,0 +1,770 @@
+{
+	"info": {
+		"_postman_id": "60def1a7-fcfd-4c0e-ac05-2226e4507ded",
+		"name": "studentGiri-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User register",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"rohan\",\n    \"email\":\"rohandev.dev72@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/user/register/",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User register",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"rohan\",\n    \"email\":\"rohandev.dev72@gmail.com\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/register/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-TdVng//chQVxxLUqDWPt7E8WYHQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 15:25:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b4ffd06a5bf53b03b3e380\",\n    \"name\": \"rohan\",\n    \"email\": \"rohandev.dev72@gmail.com\",\n    \"password\": \"123\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"rohandev.dev72@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/user/login",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"rohandev.dev72@gmail.com\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c-Hr3H30GeHKHbl3jWb/0vckNuwNI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 14:06:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b4d24521de121fd8db233b\",\n    \"name\": \"rohan\",\n    \"email\": \"rohandev.dev72@gmail.com\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "User Edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"RohanDev\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/user/edit?userId=60b4d24521de121fd8db233b",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"user",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60b4d24521de121fd8db233b"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Edit",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"RohanDev\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/edit?userId=60b4d24521de121fd8db233b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "60b4d24521de121fd8db233b"
+								}
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "112"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"70-NQi2kOw0t+l5IpGIJZaWcfGzDwk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 14:10:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b4d24521de121fd8db233b\",\n    \"name\": \"RohanDev\",\n    \"email\": \"rohandev.dev72@gmail.com\",\n    \"password\": \"123\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "User Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/user?userId=60b4ffd06a5bf53b03b3e380",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60b4ffd06a5bf53b03b3e380"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"heading\":\"task1\",\n    \"body\":\"task One body\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/task/create?userId=60b4ffd06a5bf53b03b3e380",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"task",
+						"create"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60b4ffd06a5bf53b03b3e380"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "task Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"heading\":\"task1\",\n    \"body\":\"task One body\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/create?userId=60b4ffd06a5bf53b03b3e380",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"create"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "60b4ffd06a5bf53b03b3e380"
+								}
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9c-vhPk+93ahiY3Oil0FF1hIUqiM/s\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 15:49:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b50595c1e0933e6247b9a0\",\n    \"heading\": \"task1\",\n    \"body\": \"task One body\",\n    \"user\": \"60b4ffd06a5bf53b03b3e380\",\n    \"createdAt\": \"2021-05-31T15:49:41.883Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Task by param Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/task/read/:taskId?userId=60b4ffd06a5bf53b03b3e380",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"task",
+						"read",
+						":taskId"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60b4ffd06a5bf53b03b3e380"
+						}
+					],
+					"variable": [
+						{
+							"key": "taskId",
+							"value": "60b50f8fee04a945b26286ac"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read Task by param Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/read/60b50595c1e0933e6247b9a0?userId=60b4ffd06a5bf53b03b3e380",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"read",
+								"60b50595c1e0933e6247b9a0"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "60b50595c1e0933e6247b9a0",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "60b4ffd06a5bf53b03b3e380"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9c-vhPk+93ahiY3Oil0FF1hIUqiM/s\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 16:03:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b50595c1e0933e6247b9a0\",\n    \"heading\": \"task1\",\n    \"body\": \"task One body\",\n    \"user\": \"60b4ffd06a5bf53b03b3e380\",\n    \"createdAt\": \"2021-05-31T15:49:41.883Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Task by param Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\":\"task One body updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/task/edit/60b50595c1e0933e6247b9a0?userId=60b4ffd06a5bf53b03b3e380",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"task",
+						"edit",
+						"60b50595c1e0933e6247b9a0"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "60b50595c1e0933e6247b9a0",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "60b4ffd06a5bf53b03b3e380"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit Task by param Id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"body\":\"task One body updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/edit/60b50595c1e0933e6247b9a0?userId=60b4ffd06a5bf53b03b3e380",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"edit",
+								"60b50595c1e0933e6247b9a0"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "60b50595c1e0933e6247b9a0",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "60b4ffd06a5bf53b03b3e380"
+								}
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-fmrn7RgPk+K9Tx05P3Kgdd5J2+M\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 16:25:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b50595c1e0933e6247b9a0\",\n    \"heading\": \"task1\",\n    \"body\": \"task One body updated\",\n    \"user\": \"60b4ffd06a5bf53b03b3e380\",\n    \"createdAt\": \"2021-05-31T15:49:41.883Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Task by param Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\":\"task One body updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/task/delete/60b50595c1e0933e6247b9a0?userId=60b4ffd06a5bf53b03b3e380",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"task",
+						"delete",
+						"60b50595c1e0933e6247b9a0"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "60b50595c1e0933e6247b9a0",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "60b4ffd06a5bf53b03b3e380"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Task All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{studentgiri}}/task/read/all?userId=60b4ffd06a5bf53b03b3e380",
+					"host": [
+						"{{studentgiri}}"
+					],
+					"path": [
+						"task",
+						"read",
+						"all"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60b4ffd06a5bf53b03b3e380"
+						},
+						{
+							"key": "",
+							"value": "60b50595c1e0933e6247b9a0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "studentgiri",
+			"value": "https://studentgiri.herokuapp.com/"
+		}
+	]
+}

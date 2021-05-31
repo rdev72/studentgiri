@@ -8,7 +8,7 @@ const morgan = require('morgan');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 //mongoose
-mongoose.connect('mongodb://localhost:27017/studentGiri',{
+mongoose.connect('mongodb+srv://rohandev74:devrohan@studentgiri-task.na3pn.mongodb.net/test',{
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
@@ -22,7 +22,7 @@ app.use(morgan('dev'))
 
 
 //Routes
-app.get('/test',(req,res)=>{res.send("Hello")})
+app.get('/',(req,res)=>{res.send("Hello")})
 app.use('/user',require('./routes/user'))
 app.use('/task',require('./routes/task'))
 
@@ -43,5 +43,5 @@ app.use('/task',require('./routes/task'))
 
 
 
-const port = 3000
+const port = process.env.PORT || 3000
 app.listen(port,console.log(`Server is running at ${port}`))
