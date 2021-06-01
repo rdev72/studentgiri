@@ -6,7 +6,7 @@ const taskSchema = require('../models/taskSchema');
 const router = express.Router();
 
 ///user register
-router.get('/register', (req, res) => {
+router.post('/register', (req, res) => {
   userSchema
     .create(req.body)
     .then(user => res.status(201).json(user))
